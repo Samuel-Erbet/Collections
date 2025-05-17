@@ -1,7 +1,5 @@
 package com.example.set.operacoesBasicas.pesquisa;
 
-import java.util.Objects;
-
 public class Contato {
     private String nome;
     private int numero;
@@ -35,15 +33,5 @@ public class Contato {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Contato contato = (Contato) o;
-        return Objects.equals(nome, contato.nome);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(nome);
-    }
 }
