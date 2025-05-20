@@ -26,4 +26,12 @@ public class Contatos {
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
+    @Override
+    public String toString() {
+        return "Contatos{" +
+                "nome='" + nome + '\'' +
+                ", numero=" + numero +
+                '}';
+    }
 }
