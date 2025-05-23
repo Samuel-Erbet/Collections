@@ -53,20 +53,21 @@ public class EstoqueProdutos {
         }
 
     public String maiorQuantidade(){
-        int valor =0;
-        String produto = null;
-        double total = 0;
-        if (!produtos.isEmpty()) {
-            for (Produto p : produtos.values()){
-                if (valor<p.getQuantidade()){
-                    valor = p.getQuantidade();
-                    produto = p.getNome();
-                    total = p.getQuantidade() * p.getPreco();
+            int valor =0;
+            String produto = null;
+            double total = 0;
+            if (!produtos.isEmpty()) {
+                for (Produto p : produtos.values()){
+                    if (valor<p.getQuantidade()){
+                        valor = p.getQuantidade();
+                        produto = p.getNome();
+                        total = p.getQuantidade() * p.getPreco();
+                    }
                 }
             }
-        }
         return "o produto com maior quantidade é : "+produto+" com "+valor+" no estoque"+" custando o lote "+total;
     }
+
 
     public static void main(String[] args) {
         EstoqueProdutos produtos = new EstoqueProdutos();
